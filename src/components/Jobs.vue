@@ -78,7 +78,7 @@ export default {
 }
 
 button {
-    margin-bottom: 62px;
+    margin-bottom: 62px !important;
 }
 
 // Loading animation courtesy of @aleksander351 - CodePen https://codepen.io/aleksander351/pen/KzgKPo
