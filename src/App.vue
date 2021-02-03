@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+  <div class="wrapper"></div>
     <router-view/>
   </div>
 </template>
@@ -11,6 +12,6 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 
 </style>

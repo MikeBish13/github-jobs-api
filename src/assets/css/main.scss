@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap");
+
+@mixin mq($point) {
+  @if $point == tablet {
+    @media (min-width: 700px) {
+      @content;
+    }
+  } @else if $point == desktop {
+    @media (min-width: 1000px) {
+      @content;
+    }
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  word-break: break-all;
+}
+
+:root {
+  --primary-color: #5964e0;
+  --secondary-color: #ffffff;
+  --bg-color: #f4f6f8;
+  --light-color: #939bf4;
+  --font-color: #6e8098;
+  --header-color: #19202D;
+  --secondary-btn-color: #5964e023;
+  --secondary-btn-color-hover: #5964e04b;
+}
+
+[data-theme="dark"] {
+  --secondary-color: #19202D;
+  --bg-color: #121721;
+  --light-color: #ffffff2c;
+  --font-color: #9DAEC2;
+  --header-color: #ffffff;
+  --secondary-btn-color: #ffffff2c;
+  --secondary-btn-color-hover: #ffffff54;
+}
+
+.App,
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background: var(--bg-color);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 87%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  min-height: 100vh;
+  background: #6e809893;
+
+  @include mq(tablet) {
+    display: none !important;
+  }
+}
+
+input,
+input::placeholder,
+button {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn-primary {
+  cursor: pointer;
+  padding: 16px 39px;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-radius: 6px;
+  background: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  transition: 300ms;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--light-color);
+  }
+}
+
